@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="highscore-demo"
-run/main_scene="res://Highscores.tscn"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+HIGHSCORE_SINGLETON="*res://Scripts/HIGHSCORE_SINGLETON.gd"
 
 [gui]
 
