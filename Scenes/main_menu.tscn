@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://to_gameplay.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/to_gameplay.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/to_highscores.gd" type="Script" id=2]
 [ext_resource path="res://theme.tres" type="Theme" id=3]
 
