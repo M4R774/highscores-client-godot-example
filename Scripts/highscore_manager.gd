@@ -48,10 +48,9 @@ func post_highscores_online():
 	$"../Loading-icon".visible = true
 	var payload_dict = {"name":HIGHSCORE_SINGLETON.PLAYER_NAME, "score":HIGHSCORE_SINGLETON.SCORE}
 	var payload_string = http_client.query_string_from_dict(payload_dict)
-	var auth=str("Basic ", 
+	var auth=str("Basic ",
 			Marshalls.utf8_to_base64(
-				str(HIGHSCORE_SINGLETON.BACKEND_USERNAME, ":", HIGHSCORE_SINGLETON.BACKEND_PASSWORD))) 
-	var headers=["Content-Type: application/json","Authorization: "+auth]
+				str(HIGHSCORE_SINGLETON.BACKEND_USERNAME, ":", HIGHSCORE_SINGLETON.BACKEND_PASSWORD)))
 	var headers = ["Content-Type: application/x-www-form-urlencoded",
 				   "Content-Length: " + str(payload_string.length()),
 				   "Authorization: "+auth]
