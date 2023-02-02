@@ -6,6 +6,7 @@ var back_end_url = ""
 func _ready():
 	back_end_url = "https://" + HIGHSCORE_SINGLETON.BACKEND_DOMAIN + "/highscores/" + HIGHSCORE_SINGLETON.GAME_NAME
 	$"../../../../Playername_prompt".visible = false
+	$"../../MarginContainer2/Back to main menu".grab_focus()
 	update_highscores_table()
 	check_if_players_score_is_high_enough()
 
@@ -59,6 +60,7 @@ func post_highscores_online():
 	request.connect("request_completed", self, "_on_post_highscores_request_completed")
 	request.request(back_end_url, headers, false, HTTPClient.METHOD_POST, payload_string)
 	HIGHSCORE_SINGLETON.SCORE = null
+	$"../../MarginContainer2/Back to main menu".grab_focus()
 	#request.queue_free()
 
 
