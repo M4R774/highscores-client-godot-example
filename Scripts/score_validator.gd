@@ -1,9 +1,14 @@
 extends LineEdit
 
+
 func _ready():
 	self.grab_focus()
 	var _result = self.connect("text_changed", self, "text_changed")
 	var _result2 = self.connect("text_entered", self, "enter_pressed")
+
+
+func _process(_delta):  # Experimental mobile keyboard does not emit text_changed signal
+	text_changed(self.text)
 
 
 func text_changed(new_text):
