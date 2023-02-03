@@ -12,7 +12,7 @@ var back_end_url = ""
 
 
 func _ready():
-	back_end_url = "https://" + HIGHSCORE_SINGLETON.BACKEND_DOMAIN + "/highscores/" + HIGHSCORE_SINGLETON.GAME_NAME
+	back_end_url = "https://" + SECRETS.DOMAIN + "/highscores/" + HIGHSCORE_SINGLETON.GAME_NAME
 	playername_prompt.visible = false
 	to_main_menu.grab_focus()
 	update_highscores_table()
@@ -32,13 +32,13 @@ func update_highscores_table():
 func update_local_highscores_table():
 	var local_highscores_text_content = ""
 	for player in HIGHSCORE_SINGLETON.LOCAL_HIGHSCORES:
-		local_highscores_text_content += (player.Name + ": " + str(player.Score) + "\n")
+		local_highscores_text_content += ("%-21s" % player.Name + str(player.Score) + "\n")
 	local_highscores_text.text = local_highscores_text_content
 
 
 func _on_get_highscores_request_completed(_result, _response_code, _headers, body):
 	var response_body = body.get_string_from_utf8()
-	online_highscores_text = response_body
+	online_highscores_text.text = response_body
 	loading_icon.visible = false
 
 
@@ -78,7 +78,7 @@ func post_highscores_online():
 	var payload_string = http_client.query_string_from_dict(payload_dict)
 	var auth=str("Basic ",
 			Marshalls.utf8_to_base64(
-				str(HIGHSCORE_SINGLETON.BACKEND_USERNAME, ":", HIGHSCORE_SINGLETON.BACKEND_PASSWORD)))
+				str(SECRETS.USERNAME, ":", SECRETS.PASSWORD)))
 	var headers = ["Content-Type: application/x-www-form-urlencoded",
 				   "Content-Length: " + str(payload_string.length()),
 				   "Authorization: "+auth]

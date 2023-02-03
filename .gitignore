@@ -8,6 +8,5 @@ export_presets.cfg
 .mono/
 data_*/
 
-config.json
-
+SECRETS.gd
 Builds/

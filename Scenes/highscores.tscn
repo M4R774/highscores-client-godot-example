@@ -23,15 +23,16 @@ online_highscores_text_path = NodePath("Scoreboard/VBoxContainer/HBoxContainer/O
 margin_right = 1026.0
 margin_bottom = 600.0
 custom_constants/margin_right = 50
-custom_constants/margin_top = 50
+custom_constants/margin_top = 40
 custom_constants/margin_left = 50
-custom_constants/margin_bottom = 50
+custom_constants/margin_bottom = 40
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Scoreboard"]
 margin_left = 50.0
-margin_top = 50.0
+margin_top = 40.0
 margin_right = 976.0
-margin_bottom = 551.0
+margin_bottom = 560.0
+custom_constants/separation = 50
 
 [node name="Label" type="Label" parent="Scoreboard/VBoxContainer"]
 margin_right = 926.0
@@ -41,59 +42,53 @@ text = "Highscores"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Scoreboard/VBoxContainer"]
-margin_top = 33.0
+margin_top = 79.0
 margin_right = 926.0
-margin_bottom = 462.0
+margin_bottom = 428.0
 
 [node name="Offline" type="VBoxContainer" parent="Scoreboard/VBoxContainer/HBoxContainer"]
 margin_right = 461.0
-margin_bottom = 429.0
+margin_bottom = 349.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 50
+custom_constants/separation = 20
 
 [node name="Title" type="Label" parent="Scoreboard/VBoxContainer/HBoxContainer/Offline"]
 margin_right = 461.0
 margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
 theme = ExtResource( 4 )
 text = "Local"
 align = 1
-valign = 1
+valign = 2
 
 [node name="Scores" type="RichTextLabel" parent="Scoreboard/VBoxContainer/HBoxContainer/Offline"]
-margin_top = 79.0
+margin_top = 49.0
 margin_right = 461.0
-margin_bottom = 379.0
+margin_bottom = 349.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme = ExtResource( 4 )
-text = "Rivi 1               1338
-Aleksi Martikainen22 1337
-Rivi 3
-RIvi 4
-Rivi 5
-Rivi 6
-Rivi 7
-Rivi 8
-Rivi 9
-Rivi 10"
+text = "1
+2
+3
+4
+5
+6
+7
+8
+9
+10"
 fit_content_height = true
 scroll_active = false
-
-[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/VBoxContainer/HBoxContainer/Offline"]
-margin_top = 429.0
-margin_right = 461.0
-margin_bottom = 429.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="Online" type="VBoxContainer" parent="Scoreboard/VBoxContainer/HBoxContainer"]
 margin_left = 465.0
 margin_right = 926.0
-margin_bottom = 429.0
+margin_bottom = 349.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 50
+custom_constants/separation = 20
 
 [node name="Title" type="Label" parent="Scoreboard/VBoxContainer/HBoxContainer/Online"]
 margin_right = 461.0
@@ -104,9 +99,9 @@ align = 1
 valign = 1
 
 [node name="Scores" type="RichTextLabel" parent="Scoreboard/VBoxContainer/HBoxContainer/Online"]
-margin_top = 79.0
+margin_top = 49.0
 margin_right = 461.0
-margin_bottom = 429.0
+margin_bottom = 349.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
@@ -122,9 +117,9 @@ texture = ExtResource( 6 )
 script = ExtResource( 7 )
 
 [node name="MarginContainer2" type="MarginContainer" parent="Scoreboard/VBoxContainer"]
-margin_top = 466.0
+margin_top = 485.0
 margin_right = 926.0
-margin_bottom = 501.0
+margin_bottom = 520.0
 size_flags_horizontal = 11
 size_flags_vertical = 14
 custom_constants/margin_right = 300
