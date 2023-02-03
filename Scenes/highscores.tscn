@@ -11,65 +11,128 @@
 [node name="Highscores" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
+playername_prompt_path = NodePath("Playername_prompt")
+namefield_path = NodePath("Playername_prompt/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/NameField")
+loading_icon_path = NodePath("Scoreboard/VBoxContainer/HBoxContainer/Online/Loading-icon")
+to_main_menu_path = NodePath("Scoreboard/VBoxContainer/MarginContainer2/Back to main menu")
+local_highscores_text_path = NodePath("Scoreboard/VBoxContainer/HBoxContainer/Offline/Scores")
+online_highscores_text_path = NodePath("Scoreboard/VBoxContainer/HBoxContainer/Online/Scores")
 
 [node name="Scoreboard" type="MarginContainer" parent="."]
-margin_right = 1030.0
+margin_right = 1026.0
 margin_bottom = 600.0
-custom_constants/margin_right = 200
+custom_constants/margin_right = 50
 custom_constants/margin_top = 50
-custom_constants/margin_left = 200
+custom_constants/margin_left = 50
 custom_constants/margin_bottom = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Scoreboard"]
-margin_left = 200.0
+margin_left = 50.0
 margin_top = 50.0
-margin_right = 830.0
-margin_bottom = 550.0
-custom_constants/separation = 50
+margin_right = 976.0
+margin_bottom = 551.0
 
-[node name="Title" type="Label" parent="Scoreboard/VBoxContainer"]
-margin_right = 630.0
+[node name="Label" type="Label" parent="Scoreboard/VBoxContainer"]
+margin_right = 926.0
 margin_bottom = 29.0
 theme = ExtResource( 4 )
 text = "Highscores"
 align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Scoreboard/VBoxContainer"]
+margin_top = 33.0
+margin_right = 926.0
+margin_bottom = 462.0
+
+[node name="Offline" type="VBoxContainer" parent="Scoreboard/VBoxContainer/HBoxContainer"]
+margin_right = 461.0
+margin_bottom = 429.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+
+[node name="Title" type="Label" parent="Scoreboard/VBoxContainer/HBoxContainer/Offline"]
+margin_right = 461.0
+margin_bottom = 29.0
+theme = ExtResource( 4 )
+text = "Local"
+align = 1
 valign = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/VBoxContainer"]
+[node name="Scores" type="RichTextLabel" parent="Scoreboard/VBoxContainer/HBoxContainer/Offline"]
 margin_top = 79.0
-margin_right = 630.0
-margin_bottom = 109.0
-custom_constants/margin_left = 150
-
-[node name="Loading-icon" type="Sprite" parent="Scoreboard/VBoxContainer/MarginContainer"]
-position = Vector2( 666, 15 )
-texture = ExtResource( 6 )
-script = ExtResource( 7 )
-
-[node name="Scores" type="RichTextLabel" parent="Scoreboard/VBoxContainer/MarginContainer"]
-margin_left = 150.0
-margin_right = 630.0
-margin_bottom = 30.0
+margin_right = 461.0
+margin_bottom = 379.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-text = "Fetching higscores from server..."
+text = "Rivi 1               1338
+Aleksi Martikainen22 1337
+Rivi 3
+RIvi 4
+Rivi 5
+Rivi 6
+Rivi 7
+Rivi 8
+Rivi 9
+Rivi 10"
 fit_content_height = true
 scroll_active = false
-script = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/VBoxContainer/HBoxContainer/Offline"]
+margin_top = 429.0
+margin_right = 461.0
+margin_bottom = 429.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Online" type="VBoxContainer" parent="Scoreboard/VBoxContainer/HBoxContainer"]
+margin_left = 465.0
+margin_right = 926.0
+margin_bottom = 429.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+
+[node name="Title" type="Label" parent="Scoreboard/VBoxContainer/HBoxContainer/Online"]
+margin_right = 461.0
+margin_bottom = 29.0
+theme = ExtResource( 4 )
+text = "Online"
+align = 1
+valign = 1
+
+[node name="Scores" type="RichTextLabel" parent="Scoreboard/VBoxContainer/HBoxContainer/Online"]
+margin_top = 79.0
+margin_right = 461.0
+margin_bottom = 429.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 4 )
+text = "Fetching higscores from the server...
+"
+fit_content_height = true
+scroll_active = false
+
+[node name="Loading-icon" type="Sprite" parent="Scoreboard/VBoxContainer/HBoxContainer/Online"]
+position = Vector2( 203, 199 )
+scale = Vector2( 1.15625, 1.15625 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="MarginContainer2" type="MarginContainer" parent="Scoreboard/VBoxContainer"]
-margin_top = 465.0
-margin_right = 630.0
-margin_bottom = 500.0
+margin_top = 466.0
+margin_right = 926.0
+margin_bottom = 501.0
 size_flags_horizontal = 11
 size_flags_vertical = 14
-custom_constants/margin_right = 150
-custom_constants/margin_left = 150
+custom_constants/margin_right = 300
+custom_constants/margin_left = 300
 
 [node name="Back to main menu" type="Button" parent="Scoreboard/VBoxContainer/MarginContainer2"]
-margin_left = 150.0
-margin_right = 480.0
+margin_left = 300.0
+margin_right = 626.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -139,3 +202,5 @@ margin_bottom = 39.0
 theme = ExtResource( 4 )
 text = "Submit"
 script = ExtResource( 2 )
+playername_prompt_path = NodePath("../../../../..")
+highscore_manager_path = NodePath("../../../../../..")

@@ -4,7 +4,7 @@ extends LineEdit
 func _ready():
 	max_length = 20
 	if HIGHSCORE_SINGLETON.PLAYER_NAME != null:
-		$".".text = HIGHSCORE_SINGLETON.PLAYER_NAME
+		self.text = HIGHSCORE_SINGLETON.PLAYER_NAME
 		self.select_all()
 	var _result = self.connect("text_changed", self, "text_changed")
 	var _result2 = self.connect("text_entered", self, "enter_pressed")
