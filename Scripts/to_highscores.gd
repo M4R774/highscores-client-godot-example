@@ -6,4 +6,4 @@ func _pressed():
 
 
 func to_highscores():
-	var _result = get_tree().change_scene("res://Scenes/highscores.tscn")
+	var _result = get_tree().change_scene_to_file("res://Scenes/highscores.tscn")

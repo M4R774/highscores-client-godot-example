@@ -22,7 +22,7 @@ func score_is_high_enough_for_local_leaderboard(score):
 func add_new_local_highscore():
 	if score_is_high_enough_for_local_leaderboard(SCORE):
 		LOCAL_HIGHSCORES.append(PlayerScore.new(PLAYER_NAME, SCORE))
-	LOCAL_HIGHSCORES.sort_custom(self, "customPlayerComparison")
+	LOCAL_HIGHSCORES.sort_custom(Callable(self,"customPlayerComparison"))
 	if LOCAL_HIGHSCORES.size() > 10:
 		LOCAL_HIGHSCORES.pop_back()
 
@@ -31,7 +31,7 @@ class PlayerScore:
 	var Name: String
 	var Score: int
 
-	func _init(name, score):
+	func _init(name,score):
 		self.Name = name
 		self.Score = score
 

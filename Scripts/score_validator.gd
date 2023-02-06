@@ -3,8 +3,8 @@ extends LineEdit
 
 func _ready():
 	self.grab_focus()
-	var _result = self.connect("text_changed", self, "text_changed")
-	var _result2 = self.connect("text_entered", self, "enter_pressed")
+	var _result = self.connect("text_changed",Callable(self,"text_changed"))
+	var _result2 = self.connect("text_submitted",Callable(self,"enter_pressed"))
 
 
 func _process(_delta):  # Experimental mobile keyboard does not emit text_changed signal
@@ -12,7 +12,7 @@ func _process(_delta):  # Experimental mobile keyboard does not emit text_change
 
 
 func text_changed(new_text):
-	if new_text.is_valid_integer():
+	if new_text.is_valid_int():
 		$"../Submit".disabled = false
 		HIGHSCORE_SINGLETON.SCORE = int(new_text)
 	else:

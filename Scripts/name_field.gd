@@ -6,8 +6,8 @@ func _ready():
 	if HIGHSCORE_SINGLETON.PLAYER_NAME != null:
 		self.text = HIGHSCORE_SINGLETON.PLAYER_NAME
 		self.select_all()
-	var _result = self.connect("text_changed", self, "text_changed")
-	var _result2 = self.connect("text_entered", self, "enter_pressed")
+	var _result = self.connect("text_changed",Callable(self,"text_changed"))
+	var _result2 = self.connect("text_submitted",Callable(self,"enter_pressed"))
 
 
 func text_changed(new_text):
@@ -15,4 +15,4 @@ func text_changed(new_text):
 
 
 func enter_pressed(_new_text):
-	$"../Submit"._pressed()
+	$"../Submit"._button_pressed()

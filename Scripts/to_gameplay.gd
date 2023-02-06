@@ -6,4 +6,4 @@ func _ready():
 
 
 func _pressed():
-	var _result = get_tree().change_scene("res://Scenes/gameplay.tscn")
+	var _result = get_tree().change_scene_to_file("res://Scenes/gameplay.tscn")
