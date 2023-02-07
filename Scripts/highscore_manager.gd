@@ -38,7 +38,7 @@ func update_highscores_table():
 func update_local_highscores_table():
 	var local_highscores_text_content = ""
 	for player in HIGHSCORE_SINGLETON.LOCAL_HIGHSCORES:
-		local_highscores_text_content += ("%-21s" % player.Name + str(player.Score) + "\n")
+		local_highscores_text_content += ("%-21s" % player["name"] + str(player["score"]) + "\n")
 	local_highscores_text.text = local_highscores_text_content
 
 
