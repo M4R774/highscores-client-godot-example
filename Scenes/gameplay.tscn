@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://2dyyr0vh2hlb"]
+[gd_scene load_steps=8 format=3 uid="uid://bxat161gi2b7e"]
 
-[ext_resource type="Script" path="res://Scripts/score_validator.gd" id="1"]
-[ext_resource type="Script" path="res://Scripts/to_highscores.gd" id="2"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/score_validator.gd" id="2_apfy6"]
 [ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="3"]
-[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="4_3wry0"]
-[ext_resource type="Script" path="res://Scripts/to_main_menu.gd" id="5_v5lx5"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/to_highscores.gd" id="3_dajg1"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/pause_menu.gd" id="4_awf5l"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/volume_slider.gd" id="5_ubhaj"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/to_main_menu.gd" id="6_q1jp6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tu3wt"]
 bg_color = Color(0.25098, 0.184314, 0.168627, 1)
@@ -50,7 +51,7 @@ layout_mode = 2
 theme = ExtResource("3")
 placeholder_text = "0"
 virtual_keyboard_type = 2
-script = ExtResource("1")
+script = ExtResource("2_apfy6")
 
 [node name="Submit" type="Button" parent="Gameplay/VBoxContainer"]
 layout_mode = 2
@@ -59,7 +60,7 @@ size_flags_vertical = 3
 theme = ExtResource("3")
 disabled = true
 text = "Win game"
-script = ExtResource("2")
+script = ExtResource("3_dajg1")
 
 [node name="Pause menu" type="PanelContainer" parent="."]
 process_mode = 3
@@ -70,7 +71,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("4_3wry0")
+script = ExtResource("4_awf5l")
 
 [node name="PanelContainer" type="PanelContainer" parent="Pause menu"]
 layout_mode = 2
@@ -98,29 +99,29 @@ text = "PAUSED"
 horizontal_alignment = 1
 
 [node name="HSeparator2" type="HSeparator" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Volume" type="Label" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme = ExtResource("3")
 text = "Volume"
 horizontal_alignment = 1
 
 [node name="Volume slider" type="HSlider" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+script = ExtResource("5_ubhaj")
 
 [node name="HSeparator" type="HSeparator" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Back to main menu" type="Button" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3")
 text = " Return to main menu "
-script = ExtResource("5_v5lx5")
+script = ExtResource("6_q1jp6")
 
 [node name="Continue" type="Button" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

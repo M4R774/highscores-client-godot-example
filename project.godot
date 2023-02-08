@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-HIGHSCORE_SINGLETON="*res://Scripts/HIGHSCORE_SINGLETON.gd"
+HIGHSCORE_SINGLETON="*res://Scripts/Menus and highscore/HIGHSCORE_SINGLETON.gd"
 SECRETS="*res://SECRETS.gd"
 
 [display]

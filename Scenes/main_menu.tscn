@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://sj0r3kgfucli"]
+[gd_scene load_steps=6 format=3 uid="uid://jrehjpxel356"]
 
-[ext_resource type="Script" path="res://Scripts/to_gameplay.gd" id="1"]
-[ext_resource type="Script" path="res://Scripts/reset.gd" id="1_12ktb"]
-[ext_resource type="Script" path="res://Scripts/to_highscores.gd" id="2"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/reset.gd" id="1_5ew53"]
 [ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="3"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/to_gameplay.gd" id="3_a6di8"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/to_highscores.gd" id="4_d3a0q"]
+[ext_resource type="Script" path="res://Scripts/Menus and highscore/volume_slider.gd" id="5_psdlo"]
 
 [node name="Main menu" type="Control"]
 layout_mode = 3
@@ -12,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_12ktb")
+script = ExtResource("1_5ew53")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -21,9 +22,9 @@ offset_bottom = 644.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 200
+theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 200
-theme_override_constants/margin_bottom = 200
+theme_override_constants/margin_bottom = 150
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -35,7 +36,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("3")
 text = "Start"
-script = ExtResource("1")
+script = ExtResource("3_a6di8")
 
 [node name="Highscores" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -43,4 +44,23 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("3")
 text = "Highscores"
-script = ExtResource("2")
+script = ExtResource("4_d3a0q")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Volume" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3")
+text = "Volume:"
+horizontal_alignment = 1
+
+[node name="Volume slider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+value = 0.5
+script = ExtResource("5_psdlo")

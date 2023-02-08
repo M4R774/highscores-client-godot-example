@@ -6,6 +6,6 @@ extends Button
 @onready var highscore_manager: Node = get_node(highscore_manager_path)
 
 
-func _button_pressed():
+func _pressed():
 	playername_prompt.visible = false
 	highscore_manager.post_highscores_online()
