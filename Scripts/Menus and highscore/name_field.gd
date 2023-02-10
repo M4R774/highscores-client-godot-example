@@ -16,4 +16,4 @@ func text_changed(new_text):
 
 func enter_pressed(_new_text):
 	HIGHSCORE_SINGLETON.PLAYER_NAME = self.text
-	$"../Submit"._button_pressed()
+	$"../Submit"._pressed()

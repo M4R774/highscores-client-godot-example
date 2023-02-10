@@ -42,9 +42,12 @@ func update_local_highscores_table():
 	local_highscores_text.text = local_highscores_text_content
 
 
-func _on_get_highscores_request_completed(_result, _response_code, _headers, body):
+func _on_get_highscores_request_completed(_result, response_code, _headers, body):
 	var response_body = body.get_string_from_utf8()
-	online_highscores_text.text = response_body
+	if response_code == 200:
+		online_highscores_text.text = response_body
+	else:
+		online_highscores_text.text = "High score server is currently unavailable."
 	loading_icon.visible = false
 
 
