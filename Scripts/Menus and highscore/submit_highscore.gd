@@ -7,5 +7,9 @@ extends Button
 
 
 func _pressed():
+	submit()
+
+
+func submit():
 	playername_prompt.visible = false
 	highscore_manager.post_highscores_online()
