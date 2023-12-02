@@ -13,6 +13,8 @@ config_version=5
 config/name="highscore-demo"
 run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.1")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://splash_screen.png"
 config/icon="res://icon.png"
 
 [autoload]
