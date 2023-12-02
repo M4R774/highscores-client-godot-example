@@ -1,5 +1,6 @@
 extends Control
 
+
 @export var playername_prompt_path: NodePath
 @onready var playername_prompt = get_node(playername_prompt_path)
 @export var namefield_path: NodePath 
@@ -15,9 +16,13 @@ extends Control
 
 var http_client = HTTPClient.new()
 var back_end_url = ""
-
+var SECRETS: Node
 
 func _ready():
+	SECRETS = get_node("/root/SECRETS")
+	if (SECRETS == null):
+		print("ERROR: SECRETS.gd node not found! Using example.SECRETS.gd instead.")
+		SECRETS = get_node("/root/EXAMPLE_SECRETS")
 	back_end_url = "https://" + SECRETS.DOMAIN + "/highscores/" + HIGHSCORE_SINGLETON.GAME_NAME
 	playername_prompt.visible = false
 	to_main_menu.grab_focus()
@@ -94,7 +99,7 @@ func post_highscores_online():
 	var request = HTTPRequest.new()
 	add_child(request)
 	request.connect("request_completed",Callable(self,"_on_post_highscores_request_completed"))
-	request.request(back_end_url, headers, 2, body)
+	request.request(back_end_url, headers, HTTPClient.METHOD_POST, body)
 	HIGHSCORE_SINGLETON.SCORE = null
 	to_main_menu.grab_focus()
 

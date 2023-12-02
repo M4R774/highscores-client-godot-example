@@ -12,13 +12,14 @@ config_version=5
 
 config/name="highscore-demo"
 run/main_scene="res://Scenes/main_menu.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
 
 HIGHSCORE_SINGLETON="*res://Scripts/Menus and highscore/HIGHSCORE_SINGLETON.gd"
-SECRETS="*res://SECRETS.gd"
+SECRETS="res://SECRETS.gd"
+EXAMPLE_SECRETS="res://example.SECRETS.gd"
 
 [display]
 

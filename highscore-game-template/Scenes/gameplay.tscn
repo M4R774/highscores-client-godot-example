@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxat161gi2b7e"]
 
+[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="1_x4sxx"]
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/score_validator.gd" id="2_apfy6"]
-[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="3"]
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/to_highscores.gd" id="3_dajg1"]
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/pause_menu.gd" id="4_awf5l"]
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/volume_slider.gd" id="5_ubhaj"]
@@ -42,13 +42,13 @@ theme_override_constants/separation = 50
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 7
-theme = ExtResource("3")
+theme = ExtResource("1_x4sxx")
 text = "This scene represents typical gameplay scene. Set player score below (only integers are valid), and press \"Win game\" buton."
 autowrap_mode = 3
 
 [node name="Score" type="LineEdit" parent="Gameplay/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3")
+theme = ExtResource("1_x4sxx")
 placeholder_text = "0"
 virtual_keyboard_type = 2
 script = ExtResource("2_apfy6")
@@ -57,7 +57,7 @@ script = ExtResource("2_apfy6")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("3")
+theme = ExtResource("1_x4sxx")
 disabled = true
 text = "Win game"
 script = ExtResource("3_dajg1")
@@ -94,7 +94,7 @@ theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3")
+theme = ExtResource("1_x4sxx")
 text = "PAUSED"
 horizontal_alignment = 1
 
@@ -103,7 +103,7 @@ layout_mode = 2
 
 [node name="Volume" type="Label" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3")
+theme = ExtResource("1_x4sxx")
 text = "Volume"
 horizontal_alignment = 1
 
@@ -119,13 +119,13 @@ layout_mode = 2
 
 [node name="Back to main menu" type="Button" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3")
+theme = ExtResource("1_x4sxx")
 text = " Return to main menu "
 script = ExtResource("6_q1jp6")
 
 [node name="Continue" type="Button" parent="Pause menu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3")
+theme = ExtResource("1_x4sxx")
 text = "Continue"
 
 [connection signal="pressed" from="Pause menu/PanelContainer/MarginContainer/VBoxContainer/Continue" to="Pause menu" method="_on_continue_pressed"]

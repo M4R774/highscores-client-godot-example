@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b74de4n7g0wnw"]
 
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/highscore_manager.gd" id="1_ut1mo"]
-[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="4"]
+[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="2_hwvf7"]
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/loading_icon.gd" id="4_jckaa"]
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/to_main_menu.gd" id="5_2u28t"]
 [ext_resource type="Script" path="res://Scripts/Menus and highscore/your_latest_score.gd" id="5_f70gn"]
@@ -47,7 +47,7 @@ theme_override_constants/separation = 40
 
 [node name="Main title" type="Label" parent="Scoreboard/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Highscores"
 horizontal_alignment = 1
 
@@ -65,14 +65,14 @@ theme_override_constants/separation = 10
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Local"
 horizontal_alignment = 1
 
 [node name="Scores" type="RichTextLabel" parent="Scoreboard/VBoxContainer/HBoxContainer/Offline"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Aleksi Martikainen22 100000000
 2
 3
@@ -94,7 +94,7 @@ theme_override_constants/separation = 10
 
 [node name="Title" type="Label" parent="Scoreboard/VBoxContainer/HBoxContainer/Online"]
 layout_mode = 2
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Online"
 horizontal_alignment = 1
 
@@ -102,7 +102,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Fetching higscores from the server...
 "
 fit_content = true
@@ -127,7 +127,7 @@ theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="Scoreboard/VBoxContainer/MarginContainer2/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Your latest score: "
 script = ExtResource("5_f70gn")
 
@@ -135,7 +135,7 @@ script = ExtResource("5_f70gn")
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 3
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "  Back to main menu  "
 script = ExtResource("5_2u28t")
 
@@ -171,7 +171,7 @@ theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="Playername_prompt/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Congratulations! You made it to top 10! What is your name?"
 autowrap_mode = 3
 
@@ -182,12 +182,12 @@ theme_override_constants/separation = 20
 [node name="NameField" type="LineEdit" parent="Playername_prompt/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 script = ExtResource("6_e3hlf")
 
 [node name="Submit" type="Button" parent="Playername_prompt/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4")
+theme = ExtResource("2_hwvf7")
 text = "Submit"
 script = ExtResource("7_gkyrt")
 playername_prompt_path = NodePath("../../../../..")
