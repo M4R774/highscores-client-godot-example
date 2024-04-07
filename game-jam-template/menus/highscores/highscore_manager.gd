@@ -23,7 +23,7 @@ func _ready():
 	if (SECRETS == null):
 		print("ERROR: SECRETS.gd node not found! Using example.SECRETS.gd instead.")
 		SECRETS = get_node("/root/EXAMPLE_SECRETS")
-	back_end_url = "https://" + SECRETS.DOMAIN + "/highscores/" + HIGHSCORE_SINGLETON.GAME_NAME
+	back_end_url = "http://" + SECRETS.DOMAIN + "/highscores/" + HIGHSCORE_SINGLETON.GAME_NAME
 	playername_prompt.visible = false
 	to_main_menu.grab_focus()
 	update_highscores_table()

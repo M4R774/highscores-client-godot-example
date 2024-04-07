@@ -10,18 +10,21 @@ config_version=5
 
 [application]
 
-config/name="highscore-demo"
-run/main_scene="res://Scenes/main_menu.tscn"
-config/features=PackedStringArray("4.1")
+config/name="game-jam-template"
+run/main_scene="res://menus/main_menu/main_menu.tscn"
+config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
-boot_splash/image="res://splash_screen.png"
-config/icon="res://icon.png"
+boot_splash/image="res://globals/splash_screen.png"
+
+[audio]
+
+buses/default_bus_layout="res://globals/audio_bus.tres"
 
 [autoload]
 
-HIGHSCORE_SINGLETON="*res://Scripts/Menus and highscore/HIGHSCORE_SINGLETON.gd"
-SECRETS="res://SECRETS.gd"
-EXAMPLE_SECRETS="res://example.SECRETS.gd"
+HIGHSCORE_SINGLETON="*res://globals/highscore_singleton.gd"
+SECRETS="res://globals/secrets.gd"
+EXAMPLE_SECRETS="res://globals/example.secrets.gd"
 
 [display]
 

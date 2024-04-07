@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://b74de4n7g0wnw"]
+[gd_scene load_steps=11 format=3 uid="uid://b74de4n7g0wnw"]
 
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/highscore_manager.gd" id="1_ut1mo"]
-[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="2_hwvf7"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/loading_icon.gd" id="4_jckaa"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/to_main_menu.gd" id="5_2u28t"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/your_latest_score.gd" id="5_f70gn"]
-[ext_resource type="Texture2D" uid="uid://cek2i4xytn5sr" path="res://Sprites/loading-icon.png" id="6"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/name_field.gd" id="6_e3hlf"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/submit_highscore.gd" id="7_gkyrt"]
+[ext_resource type="Script" path="res://menus/highscores/highscore_manager.gd" id="1_ut1mo"]
+[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://menus/theme.tres" id="2_hwvf7"]
+[ext_resource type="Script" path="res://menus/highscores/loading_icon.gd" id="4_jckaa"]
+[ext_resource type="Script" path="res://menus/highscores/to_main_menu.gd" id="5_2u28t"]
+[ext_resource type="Script" path="res://menus/highscores/your_latest_score.gd" id="5_f70gn"]
+[ext_resource type="Texture2D" uid="uid://cek2i4xytn5sr" path="res://menus/highscores/loading_icon.png" id="6"]
+[ext_resource type="Script" path="res://menus/highscores/name_field.gd" id="6_e3hlf"]
+[ext_resource type="PackedScene" uid="uid://boe8ac3tehi3n" path="res://menus/main_menu/main_menu.tscn" id="7_2wakd"]
+[ext_resource type="Script" path="res://menus/highscores/submit_highscore.gd" id="7_gkyrt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0q8m6"]
 bg_color = Color(0.243137, 0.203922, 0.203922, 1)

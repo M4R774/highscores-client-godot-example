@@ -1,3 +1,2 @@
-# highscores-example
-
-Godot example for using the highscores backend
+# ldjam55
+Ludum Dare 55 game jam

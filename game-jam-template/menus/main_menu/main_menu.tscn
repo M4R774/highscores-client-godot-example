@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://boe8ac3tehi3n"]
 
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/reset.gd" id="1_5ew53"]
-[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://theme.tres" id="2_mkwq4"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/to_gameplay.gd" id="3_a6di8"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/to_highscores.gd" id="4_d3a0q"]
-[ext_resource type="Script" path="res://Scripts/Menus and highscore/volume_slider.gd" id="5_psdlo"]
+[ext_resource type="Script" path="res://menus/highscores/reset.gd" id="1_l3e71"]
+[ext_resource type="Theme" uid="uid://c2axe1dqtbw74" path="res://menus/theme.tres" id="2_pq6lo"]
+[ext_resource type="Script" path="res://menus/main_menu/to_gameplay.gd" id="3_d5uk5"]
+[ext_resource type="Script" path="res://menus/highscores/to_highscores.gd" id="5_iscxr"]
+[ext_resource type="Script" path="res://menus/main_menu/volume_slider.gd" id="7_lrcc6"]
 
 [node name="Main menu" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5ew53")
+script = ExtResource("1_l3e71")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -32,26 +32,26 @@ theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_mkwq4")
+theme = ExtResource("2_pq6lo")
 theme_override_font_sizes/font_size = 32
-text = "Highscore demo project"
+text = "Game jam template"
 horizontal_alignment = 1
 
 [node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_mkwq4")
+theme = ExtResource("2_pq6lo")
 text = "Start"
-script = ExtResource("3_a6di8")
+script = ExtResource("3_d5uk5")
 
 [node name="Highscores" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_mkwq4")
+theme = ExtResource("2_pq6lo")
 text = "Highscores"
-script = ExtResource("4_d3a0q")
+script = ExtResource("5_iscxr")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -59,7 +59,7 @@ theme_override_constants/separation = 20
 
 [node name="Volume" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_mkwq4")
+theme = ExtResource("2_pq6lo")
 text = "Volume:"
 horizontal_alignment = 1
 
@@ -70,4 +70,4 @@ size_flags_vertical = 1
 max_value = 1.0
 step = 0.01
 value = 0.5
-script = ExtResource("5_psdlo")
+script = ExtResource("7_lrcc6")

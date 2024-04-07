@@ -1,9 +1,9 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://c2axe1dqtbw74"]
 
-[ext_resource type="FontFile" uid="uid://uljfvni6d4le" path="res://Fonts/VeraMono.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://uljfvni6d4le" path="res://addons/fonts/vera_mono/VeraMono.ttf" id="1_xel23"]
 
 [sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("1")])
+fallbacks = Array[Font]([ExtResource("1_xel23")])
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

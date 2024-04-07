@@ -7,7 +7,8 @@ Rem -c is for creating an archive
 Rem -f is for archive filename
 Rem -C my_directory . makes that the contents are directly at the root of the
 Rem      archive, not inside Builds folder
-cd Builds/HTML5
-tar.exe -caf ../html5_executable.zip *
+
+cd builds\web\latest
+tar.exe -caf ../latest.zip *
 cd ..
-butler push html5_executable.zip martta/online-highscore-demo:html5
+butler push latest.zip martta/ldjam55:html5

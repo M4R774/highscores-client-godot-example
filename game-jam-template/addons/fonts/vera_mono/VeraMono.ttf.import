@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c0bdneup2supa"
-path="res://.godot/imported/VeraMono-Italic.ttf-2bbffd9dcb4147e13ad46e5db08c85f8.fontdata"
+uid="uid://uljfvni6d4le"
+path="res://.godot/imported/VeraMono.ttf-1b96cf96ed5cb4a48abb9f6d25e529e3.fontdata"
 
 [deps]
 
-source_file="res://Fonts/VeraMono-Italic.ttf"
-dest_files=["res://.godot/imported/VeraMono-Italic.ttf-2bbffd9dcb4147e13ad46e5db08c85f8.fontdata"]
+source_file="res://addons/fonts/vera_mono/VeraMono.ttf"
+dest_files=["res://.godot/imported/VeraMono.ttf-1b96cf96ed5cb4a48abb9f6d25e529e3.fontdata"]
 
 [params]
 
